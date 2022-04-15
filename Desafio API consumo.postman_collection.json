@@ -1,0 +1,546 @@
+{
+	"info": {
+		"_postman_id": "953fd4ab-02e2-4595-bfd1-abdc7a087b3b",
+		"name": "Desafio API consumo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Vereador",
+			"item": [
+				{
+					"name": "Buscar Todos os Vereadores",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjQwMTk1ODYyfQ.Jllt2DtF1B-QtU6ukIK0N7rEDH9t4Aa6qFbIvJh13fI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/vereadores",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"vereadores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar um Verador pelo id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjQwMjAzMDMwfQ.KR7eIU6TLmTPigeh_gJmVpk9_VVqcb_f0Eur8MbPirY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURLConsumo}}/vereadoresConsumo/3",
+							"host": [
+								"{{baseURLConsumo}}"
+							],
+							"path": [
+								"vereadoresConsumo",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Governador",
+			"item": [
+				{
+					"name": "Buscar Todos os Governadores",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjM5NDE5NzQ4fQ.47Y5RhbT3vndqXXt13kDakqLZz7gt2s0IDKV0e99uE8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURLConsumo}}/governadoresConsumo",
+							"host": [
+								"{{baseURLConsumo}}"
+							],
+							"path": [
+								"governadoresConsumo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar um Governador pelo id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjQwMjAwMTc3fQ.rciRw7XvhBWbkGeVYbybvzQW00bdO-e7xcYVSJYrZFA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURLConsumo}}/governadoresConsumo/4",
+							"host": [
+								"{{baseURLConsumo}}"
+							],
+							"path": [
+								"governadoresConsumo",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth (Token Acesso)",
+			"item": [
+				{
+					"name": "Buscar Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@admin.com\",\r\n    \"senha\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/auth",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Depuados",
+			"item": [
+				{
+					"name": "Buscar Todos os Deputados",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjM5NDE5NzQ4fQ.47Y5RhbT3vndqXXt13kDakqLZz7gt2s0IDKV0e99uE8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"nome\": \"Matriz C\",\r\n   \"endereco\": {\r\n       \"logradouro\": \"Rua C\",\r\n       \"numero\": \"1234\",\r\n       \"complemento\": \"\",\r\n       \"cep\": \"1111111\"\r\n\r\n   }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURLConsumo}}/deputadosConsumo",
+							"host": [
+								"{{baseURLConsumo}}"
+							],
+							"path": [
+								"deputadosConsumo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar um Deputado pelo id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjQwMjAzMDMwfQ.KR7eIU6TLmTPigeh_gJmVpk9_VVqcb_f0Eur8MbPirY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURLConsumo}}/deputadosConsumo/3",
+							"host": [
+								"{{baseURLConsumo}}"
+							],
+							"path": [
+								"deputadosConsumo",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Senador",
+			"item": [
+				{
+					"name": "Buscar Todos os Senadores",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjQwMjAxMjg4fQ.j_bqo8Ye5FW-5ItJnSUfsFHhwblZoiu4qqUZjyTs744",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURLConsumo}}/senadoresConsumo",
+							"host": [
+								"{{baseURLConsumo}}"
+							],
+							"path": [
+								"senadoresConsumo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar um Senador pelo id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjQwMjAxMjg4fQ.j_bqo8Ye5FW-5ItJnSUfsFHhwblZoiu4qqUZjyTs744",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURLConsumo}}/senadoresConsumo/3",
+							"host": [
+								"{{baseURLConsumo}}"
+							],
+							"path": [
+								"senadoresConsumo",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Prefeito",
+			"item": [
+				{
+					"name": "Buscar Todos os Prefeitos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjM5NDE5NzQ4fQ.47Y5RhbT3vndqXXt13kDakqLZz7gt2s0IDKV0e99uE8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"nome\": \"Matriz C\",\r\n   \"endereco\": {\r\n       \"logradouro\": \"Rua C\",\r\n       \"numero\": \"1234\",\r\n       \"complemento\": \"\",\r\n       \"cep\": \"1111111\"\r\n\r\n   }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURLConsumo}}/prefeitosConsumo",
+							"host": [
+								"{{baseURLConsumo}}"
+							],
+							"path": [
+								"prefeitosConsumo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Prefeito pelo id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjQwMjAwODcwfQ.vhTCjHpvvkzXV4ZVPWbay0qwjVaDJiLPpgytl0a-x0g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURLConsumo}}/prefeitosConsumo/3",
+							"host": [
+								"{{baseURLConsumo}}"
+							],
+							"path": [
+								"prefeitosConsumo",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ministro",
+			"item": [
+				{
+					"name": "Buscar Todos os Ministros",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjM5NDE5NzQ4fQ.47Y5RhbT3vndqXXt13kDakqLZz7gt2s0IDKV0e99uE8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURLConsumo}}/ministrosConsumo",
+							"host": [
+								"{{baseURLConsumo}}"
+							],
+							"path": [
+								"ministrosConsumo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Ministro pelo ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjQwMjAwNjE4fQ.s_nujoHeXm5lWqj6Fi8ehZDCaoh1GkQrLRrXLB32-1s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURLConsumo}}/ministrosConsumo/2",
+							"host": [
+								"{{baseURLConsumo}}"
+							],
+							"path": [
+								"ministrosConsumo",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Presidente",
+			"item": [
+				{
+					"name": "Buscar Todos os Presidentes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjM5NDE5NzQ4fQ.47Y5RhbT3vndqXXt13kDakqLZz7gt2s0IDKV0e99uE8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"nome\": \"Matriz C\",\r\n   \"endereco\": {\r\n       \"logradouro\": \"Rua C\",\r\n       \"numero\": \"1234\",\r\n       \"complemento\": \"\",\r\n       \"cep\": \"1111111\"\r\n\r\n   }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURLConsumo}}/presidentesConsumo",
+							"host": [
+								"{{baseURLConsumo}}"
+							],
+							"path": [
+								"presidentesConsumo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar um Presidente pelo id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjQwMjAwODcwfQ.vhTCjHpvvkzXV4ZVPWbay0qwjVaDJiLPpgytl0a-x0g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURLConsumo}}/presidentesConsumo/5",
+							"host": [
+								"{{baseURLConsumo}}"
+							],
+							"path": [
+								"presidentesConsumo",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
